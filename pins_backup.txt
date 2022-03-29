@@ -1,0 +1,66 @@
+// function getPINs(observed) {
+//   let number = parseInt(observed);
+//   let digits = [];
+//   let pins = [];
+
+//   console.log(observed)
+
+//   while (number > 0) {
+//     digits.unshift(number % 10);
+//     number = Math.floor(number / 10);
+//   }
+
+//   if (digits.length == 1) {
+//     for (let k = 0; k < combinations[digits[0]].length; k++) {
+//       let number = -1;
+//       number = combinations[digits[0]][k].toString();
+
+//       if (!pins.includes(number)) {
+//         pins.push(number);
+//       }
+//     }
+//   } else {
+//     for (let i = 0; i < digits.length; i++) {
+//       for (let j = 0; j < digits.length; j++) {
+
+//         if (j != i) {
+
+//           for (let z = 0; z < combinations[digits[i]].length; z++) {
+//             for (let k = 0; k < combinations[digits[j]].length; k++) {
+//               let number = -1;
+//               if (i < j) {
+//                 number = combinations[digits[i]][z].toString() + combinations[digits[j]][k].toString();
+//               } else {
+//                 number = + combinations[digits[j]][k].toString() + combinations[digits[i]][z].toString();
+//               }
+
+//               if (!pins.includes(number)) {
+//                 pins.push(number);
+//               }
+//             }
+//           }
+
+//         }
+
+//       }
+//     }
+//   }
+
+
+//   console.log(pins);
+
+//   return pins;
+// }
+
+// let combinations = {
+//   1: [1, 2, 4],
+//   2: [2, 1, 3, 5],
+//   3: [3, 2, 6],
+//   4: [4, 1, 7, 5],
+//   5: [5, 2, 4, 6, 8],
+//   6: [6, 3, 5, 9],
+//   7: [7, 4, 8],
+//   8: [8, 5, 7, 9, 0],
+//   9: [9, 8, 6],
+//   0: [0, 8],
+// }
